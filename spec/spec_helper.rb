@@ -1,5 +1,7 @@
+require 'rspec/json_matcher'
 require 'infrataster/rspec'
 
+RSpec.configuration.include RSpec::JsonMatcher
 Infrataster::Server.define(
   :proxy,           # name
   '192.168.0.0/16', # ip address
