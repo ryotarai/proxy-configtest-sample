@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe server(:proxy) do
   describe http('http://foo.example.com') do
-    it 'returns "Foo"' do
-      expect(response.body).to eq('Foo')
+    it 'returns 200' do
+      expect(response.status).to eq(200)
     end
   end
 end
