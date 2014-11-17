@@ -12,5 +12,11 @@ describe server(:proxy) do
       })
     end
   end
+
+  describe http('http://foo.example.com/isucon') do
+    it 'returns Cache-Control header' do
+      expect(response.headers['Cache-Control']).to eq('max-age=86400')
+    end
+  end
 end
 
