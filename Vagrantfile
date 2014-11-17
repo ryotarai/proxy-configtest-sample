@@ -1,5 +1,8 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
 # hosts = %w!app-foo-001!
-hosts = %w!!
+hosts = %w!app-001!
 
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
